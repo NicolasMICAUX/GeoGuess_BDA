@@ -25,15 +25,6 @@
             <DialogRoom />
         </div>
         <div class="search-box__mapmenu">
-            <v-btn
-                text
-                class="btn-customs"
-                color="primary"
-                height="50"
-                @click="dialogCustom = !dialogCustom"
-            >
-                <v-icon>mdi-map-plus</v-icon> {{ $t('Home.createMap') }}
-            </v-btn>
             <DialogCustomMap
                 :visibility="dialogCustom"
                 @change-visibility="changeDialogCustom"

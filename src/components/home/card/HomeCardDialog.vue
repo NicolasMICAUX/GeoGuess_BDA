@@ -33,10 +33,6 @@
                 <v-btn color="primary" @click="onClickSinglePlayer">
                     {{ $t('DialogRoom.singlePlayer') }}
                 </v-btn>
-
-                <v-btn color="secondary" dark @click="onClickMultiPlayer">
-                    {{ $t('DialogRoom.withFriends') }}
-                </v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
