@@ -12,16 +12,6 @@
             >
                 {{ $t('DialogRoom.singlePlayer') }}
             </v-btn>
-
-            <v-btn
-                class="search-box__btns__btn"
-                rounded
-                color="secondary"
-                large
-                @click="openDialog(false)"
-            >
-                {{ $t('DialogRoom.withFriends') }}
-            </v-btn>
             <DialogRoom />
         </div>
         <div class="search-box__mapmenu">

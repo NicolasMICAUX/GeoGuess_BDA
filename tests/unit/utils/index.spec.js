@@ -159,7 +159,7 @@ describe('utils/index.js', () => {
         };
         const res = await getAreaCodeNameFromLatLng(gps, () => {}, {
             "bbox": [-33.8689056,5.2693306,-73.9830625,-28.6289646],
-            "urlArea": "https://raw.githubusercontent.com/GeoGuess/GeoGuess-Maps/main/public/geojson/areas/mexico_states.geojson",
+            "urlArea": "https://raw.githubusercontent.com/NicolasMICAUX/GeoGuess_BDA/master/custom_map_bda.geojson",
             "type": "nominatim",
             "pathKey": "name",
             "nominatimResultPath": "address.state",
@@ -179,7 +179,7 @@ describe('utils/index.js', () => {
         };
         const res = await getAreaCodeNameFromLatLng(gps, () => {}, {
             "bbox": [-33.8689056,5.2693306,-73.9830625,-28.6289646],
-            "urlArea": "https://raw.githubusercontent.com/GeoGuess/GeoGuess-Maps/main/public/geojson/areas/mexico_states.geojson",
+            "urlArea": "https://raw.githubusercontent.com/NicolasMICAUX/GeoGuess_BDA/master/custom_map_bda.geojson",
             "type": "nominatim",
             "pathKey": "name",
             "nominatimResultPath": "address.state",

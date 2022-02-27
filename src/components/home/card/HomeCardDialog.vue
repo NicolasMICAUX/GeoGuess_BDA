@@ -61,16 +61,18 @@ export default {
         ...mapActions('settingsStore', ['openDialogRoom']),
         ...mapActions(['loadGeoJsonFromUrl', 'setGeoJson', 'setMapLoaded', 'loadMap']),
         setMap() {
-            if (this.type === 'area') {
-                this.loadGeoJsonFromUrl(this.data.data.urlArea);
-                this.setGameSettings({ areaParams: this.data });
-            } else {
-                if (this.data.type === 'custom') {
-                    this.setMapLoaded(this.data);
-                } else {
-                    this.loadMap(this.data);
-                }
-            }
+            this.loadGeoJsonFromUrl(this.data.data.urlArea);
+            this.setGameSettings({ areaParams: this.data });
+            // if (this.type === 'area') {
+            //     this.loadGeoJsonFromUrl(this.data.data.urlArea);
+            //     this.setGameSettings({ areaParams: this.data });
+            // } else {
+            //     if (this.data.type === 'custom') {
+            //         this.setMapLoaded(this.data);
+            //     } else {
+            //         this.loadMap(this.data);
+            //     }
+            // }
             this.visible = false;
         },
         onClickSinglePlayer() {
