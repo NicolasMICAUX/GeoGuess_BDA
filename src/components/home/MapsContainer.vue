@@ -1,76 +1,5 @@
 <template>
     <div id="maps-container">
-        <div class="maps-container__header">
-            <v-checkbox
-                v-model="showAreas"
-                :label="$t('Home.HomeCardMode.area')"
-                dense
-                hide-details
-            />
-            <v-checkbox
-                v-model="showMaps"
-                :label="$t('Home.HomeCardMode.map')"
-                dense
-                hide-details
-            />
-            <v-text-field
-                v-model="search"
-                class="pl-3"
-                prepend-inner-icon="mdi-magnify"
-                filled
-                outlined
-                single-line
-                dense
-                hide-details
-                width="50px"
-            />
-        </div>
-        <template 
-            v-if="showAreas"
-        >
-            <v-container> <h2>{{ $t('Home.Sections.areasTitle') }}</h2></v-container>
-            <section
-                v-if="search === '' && showMaps"
-                class="sliders-container"
-            >
-                <v-slide-group show-arrows="always">
-                    <v-slide-item
-                        v-for="(mode, index) in areasFiltered"
-                        :key="index"
-                        class="ma-4"
-                    >
-                        <HomeCard
-                            :data="mode"
-                            type="area"
-                        />
-                    </v-slide-item>
-                </v-slide-group>
-            </section>
-            <section
-                v-else
-                class="maps"
-            >
-                <HomeCard
-                    v-for="(mode, index) in areasFiltered"
-                    :key="index"
-                    :data="mode"
-                    type="area"
-                />
-            </section>
-        </template>
-        <template 
-            v-if="showMaps"
-        >
-            <v-container><h2>{{ $t('Home.Sections.mapsTitle') }}</h2></v-container>
-            <section class="maps">
-                <HomeCard
-                    v-for="(map, index) in mapsFiltered"
-                    :key="index"
-                    :data="map"
-                    type="map"
-                />
-            </section>
-        </template>
         <p
             v-if="!showMaps && !showAreas"
             class="no-results subtitle-1"
@@ -96,8 +25,8 @@ export default {
     data() {
         return {
             search: '',
-            showAreas: true,
-            showMaps: true,
+            showAreas: false,
+            showMaps: false,
         };
     },
 
