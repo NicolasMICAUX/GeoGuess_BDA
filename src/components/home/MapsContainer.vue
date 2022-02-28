@@ -1,6 +1,6 @@
 <template>
     <div id="maps-container">
-        <div class="maps-container__header">
+        <div class="maps-container__header" v-show="false">
             <v-checkbox
                 v-model="showAreas"
                 :label="$t('Home.HomeCardMode.area')"
@@ -26,7 +26,7 @@
             />
         </div>
         <template 
-            v-if="showAreas"
+            v-if="false"
         >
             <v-container> <h2>{{ $t('Home.Sections.areasTitle') }}</h2></v-container>
             <section
@@ -59,7 +59,7 @@
             </section>
         </template>
         <template 
-            v-if="showMaps"
+            v-if="false"
         >
             <v-container><h2>{{ $t('Home.Sections.mapsTitle') }}</h2></v-container>
             <section class="maps">
@@ -96,8 +96,8 @@ export default {
     data() {
         return {
             search: '',
-            showAreas: true,
-            showMaps: true,
+            showAreas: false,
+            showMaps: false,
         };
     },
 
