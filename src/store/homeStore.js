@@ -181,14 +181,14 @@ export default {
             }
         },
         async loadMap({ commit }, map) {
-            const geojson = await getGeoJsonFromUrl(map.url);
+            const geojson = await getGeoJsonFromUrl("https://raw.githubusercontent.com/NicolasMICAUX/GeoGuess_BDA/master/custom_map_bda.geojson");
             if (geojson) {
                 map.geojson = geojson;
                 commit(MutationTypes.HOME_SET_MAP, map);
             }
         },
         async loadGeoJsonFromUrl({ commit }, url) {
-            const geojson = await getGeoJsonFromUrl(url);
+            const geojson = await getGeoJsonFromUrl("https://raw.githubusercontent.com/NicolasMICAUX/GeoGuess_BDA/master/custom_map_bda.geojson");
             if (geojson) {
                 commit(MutationTypes.HOME_SET_GEOJSON, geojson);
             }
